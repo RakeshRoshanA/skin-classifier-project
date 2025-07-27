@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skin Condition Classifier</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Advanced Skin Condition Classifier</h1>
+            <p>Upload an image of Acne, Psoriasis, or Vitiligo to get a prediction.</p>
+        </div>
+        <form action="/predict" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" id="file" class="inputfile" accept="image/*" required>
+            <label for="file">Choose an image</label>
+            <button type="submit" class="btn">Predict</button>
+        </form>
+    </div>
+</body>
+</html>

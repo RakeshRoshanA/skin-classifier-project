@@ -1,0 +1,156 @@
+/* --- General Body & Font Styling --- */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #f0f4f8; /* Light blue-gray background */
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* --- Centered Container --- */
+.container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px; /* Max width for larger screens */
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* --- Header Styling --- */
+.header h1 {
+    color: #0d47a1; /* Deep blue */
+    margin-bottom: 10px;
+}
+
+.header p {
+    color: #555;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+/* --- Form & Button Styling --- */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Hide the default file input */
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+/* Style the custom label to look like a button */
+.inputfile + label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;
+    background-color: #1976d2; /* Bright blue */
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+    background-color: #1565c0; /* Darker blue on hover */
+}
+
+.btn {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: white;
+    background-color: #28a745; /* Green for predict button */
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+/* --- Results Page Styling --- */
+.prediction-box {
+    background-color: #e3f2fd; /* Light blue background for result */
+    border-left: 5px solid #1976d2;
+    padding: 20px;
+    margin: 30px 0;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.prediction-box h2 {
+    margin: 0 0 10px 0;
+    color: #0d47a1;
+}
+.prediction-box h2 span {
+    color: #d32f2f; /* Red for emphasis */
+    font-weight: 700;
+}
+.prediction-box h3 span {
+    color: #333;
+    font-weight: 700;
+}
+
+
+.images-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.image-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.image-box h3 {
+    margin-bottom: 10px;
+    color: #1976d2;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 40px;
+    text-decoration: none;
+    background-color: #5a6268;
+}
+.back-link:hover {
+    background-color: #4a4f54;
+}
+
+/* --- Responsive Design for Mobile --- */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .images-grid {
+        grid-template-columns: 1fr; /* Stack images on top of each other */
+    }
+    
+    .header h1 {
+        font-size: 1.8rem;
+    }
+}
